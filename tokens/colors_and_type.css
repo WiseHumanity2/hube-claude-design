@@ -1,0 +1,389 @@
+/* =========================================================================
+   Hu.Be Design System — Colors & Type
+   Brand: Hu.Be by Wise Humanity
+   Source: hube_visual_branding_guidelines.md (WiseHumanity2/hube-claude-design)
+   ========================================================================= */
+
+/* ---------- Nunito (self-hosted, full weight range) ---------- */
+
+@font-face {
+  font-family: "Nunito";
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Nunito-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+  src: url("./fonts/Nunito-ExtraLightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Nunito-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  src: url("./fonts/Nunito-LightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Nunito-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("./fonts/Nunito-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Nunito-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url("./fonts/Nunito-MediumItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Nunito-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: url("./fonts/Nunito-SemiBoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Nunito-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("./fonts/Nunito-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Nunito-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+  src: url("./fonts/Nunito-ExtraBoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Nunito-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+  src: url("./fonts/Nunito-BlackItalic.ttf") format("truetype");
+}
+
+:root {
+  /* =====================================================================
+     COLOUR — five colours only.
+     Navy dominates (50–60%). Orange is reserved for CTAs and key figures.
+     Yellow is rare. No greys, no pastels, no gradients pulled from these.
+     ===================================================================== */
+
+  /* Raw palette */
+  --navy:           #0f233d;  /* Primary. Anchor. Dominates every layout. */
+  --blue:           #005588;  /* Secondary. Supporting depth. */
+  --orange:         #fc8747;  /* Accent. CTAs, key figures. */
+  --yellow:         #fed23d;  /* Rare. Tiny highlights, data accents. */
+  --white:          #ffffff;  /* Breathing space, text on dark. */
+
+  /* Navy steps — built ONLY from the navy at opacity (no greys).
+     Use these for surfaces stacked on a navy background. */
+  --navy-900:       #0a182b;  /* deepest — used for vignette backgrounds */
+  --navy-800:       #0f233d;  /* base navy */
+  --navy-700:       #142d4d;  /* one step up — card on navy */
+  --navy-600:       #1c3a63;  /* two steps up — hover on a navy card */
+  --navy-500:       #26486f;  /* divider on navy */
+
+  /* Text-on-navy tints (navy with white at opacity, pre-baked) */
+  --on-navy-100:    #ffffff;       /* primary text on navy */
+  --on-navy-80:     rgba(255,255,255,0.80); /* secondary text */
+  --on-navy-60:     rgba(255,255,255,0.60); /* tertiary / metadata */
+  --on-navy-40:     rgba(255,255,255,0.40); /* disabled / faint */
+  --on-navy-12:     rgba(255,255,255,0.12); /* borders, hairlines */
+
+  /* Text-on-white tints (navy at opacity) */
+  --on-white-100:   #0f233d;
+  --on-white-70:    rgba(15,35,61,0.70);
+  --on-white-50:    rgba(15,35,61,0.50);
+  --on-white-12:    rgba(15,35,61,0.12);
+
+  /* =====================================================================
+     SEMANTIC ROLES
+     ===================================================================== */
+  --bg:             var(--navy);          /* default page background */
+  --bg-alt:         var(--navy-900);      /* deeper, e.g. modal backdrop */
+  --surface:        var(--navy-700);      /* card on navy */
+  --surface-raised: var(--navy-600);      /* hover / focused card */
+  --surface-light:  #fbf9f4;              /* warm off-white for the rare light slide */
+
+  --fg:             var(--on-navy-100);   /* default text on navy */
+  --fg-muted:       var(--on-navy-80);
+  --fg-soft:        var(--on-navy-60);
+  --fg-faint:       var(--on-navy-40);
+
+  --line:           var(--on-navy-12);    /* hairline divider */
+  --line-strong:    var(--navy-500);
+
+  --accent:         var(--orange);        /* CTA, key figure */
+  --accent-soft:    rgba(252,135,71,0.14); /* tinted background for accent chips */
+  --accent-line:    rgba(252,135,71,0.40); /* CTA outline */
+
+  --highlight:      var(--yellow);        /* tiny data points only */
+  --link:           var(--orange);
+
+  /* =====================================================================
+     TYPOGRAPHY — Nunito only. Hierarchy from weight, not from family.
+     ===================================================================== */
+
+  /* Family */
+  --font-family:    "Nunito", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  /* Weight ladder */
+  --fw-extralight:  200;
+  --fw-light:       300;
+  --fw-regular:     400;
+  --fw-medium:      500;
+  --fw-semibold:    600;
+  --fw-bold:        700;
+  --fw-extrabold:   800;
+  --fw-black:       900;
+
+  /* Type scale — built for 1920×1080 decks and ~16px web body.
+     Headlines are LARGE and CONFIDENT. Body never below 14px. */
+  --t-display:      88px;   /* hero / cover headline */
+  --t-h1:           64px;   /* deck section title */
+  --t-h2:           44px;   /* slide headline */
+  --t-h3:           32px;   /* subhead */
+  --t-h4:           24px;   /* card title */
+  --t-h5:           20px;   /* small heading */
+  --t-body-lg:      20px;   /* lead paragraph in a deck */
+  --t-body:         16px;   /* default body */
+  --t-body-sm:      14px;   /* metadata / caption */
+  --t-label:        13px;   /* SemiBold labels, tracked */
+  --t-micro:        11px;   /* legal / footnote — print only */
+
+  /* Line heights — generous, the brand breathes */
+  --lh-tight:       1.05;
+  --lh-snug:        1.15;
+  --lh-normal:      1.35;
+  --lh-relaxed:     1.5;
+
+  /* Letter spacing */
+  --ls-tight:       -0.01em;  /* large display sizes */
+  --ls-normal:      0;
+  --ls-label:       0.04em;   /* SemiBold labels only */
+
+  /* =====================================================================
+     SHAPE, ELEVATION, SPACING
+     ===================================================================== */
+
+  /* Radii — soft but not pillowy. Nunito's roundness echoes through. */
+  --radius-xs:      6px;
+  --radius-sm:      10px;
+  --radius-md:      16px;   /* default card */
+  --radius-lg:      24px;   /* large surface */
+  --radius-xl:      32px;
+  --radius-pill:    999px;
+
+  /* Spacing — 4px base, with named steps used through the system */
+  --space-0:        0;
+  --space-1:        4px;
+  --space-2:        8px;
+  --space-3:        12px;
+  --space-4:        16px;
+  --space-5:        20px;
+  --space-6:        24px;
+  --space-8:        32px;
+  --space-10:       40px;
+  --space-12:       48px;
+  --space-16:       64px;
+  --space-20:       80px;
+  --space-24:       96px;
+
+  /* Shadows — used sparingly. Navy + orange glow are the brand's two flavours. */
+  --shadow-sm:      0 1px 2px rgba(10,24,43,0.32);
+  --shadow-md:      0 8px 24px rgba(10,24,43,0.42);
+  --shadow-lg:      0 20px 60px rgba(10,24,43,0.55);
+  --shadow-glow:    0 0 0 1px rgba(252,135,71,0.30),
+                    0 12px 40px rgba(252,135,71,0.18);
+  --shadow-inset-line: inset 0 0 0 1px var(--on-navy-12);
+
+  /* Motion */
+  --ease-out:       cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out:    cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:       120ms;
+  --dur-base:       200ms;
+  --dur-slow:       360ms;
+  --dur-breath:     4000ms;  /* the lantern breathing tempo */
+}
+
+/* =========================================================================
+   BASE / ELEMENT DEFAULTS
+   Apply by importing this file and adding the styles below in your page.
+   These are opt-in — use the .hube-doc wrapper or just <body class="hube">.
+   ========================================================================= */
+
+.hube,
+body.hube,
+.hube-doc {
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular);
+  font-size: var(--t-body);
+  line-height: var(--lh-normal);
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headlines — Black weight, tight leading, never centred for body */
+.hube-display,
+.hube h1.display,
+.hube-doc h1.display {
+  font-size: var(--t-display);
+  font-weight: var(--fw-black);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+}
+
+.hube h1, .hube-doc h1 {
+  font-size: var(--t-h1);
+  font-weight: var(--fw-black);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  margin: 0 0 var(--space-6);
+}
+.hube h2, .hube-doc h2 {
+  font-size: var(--t-h2);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+  margin: 0 0 var(--space-5);
+}
+.hube h3, .hube-doc h3 {
+  font-size: var(--t-h3);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  margin: 0 0 var(--space-4);
+}
+.hube h4, .hube-doc h4 {
+  font-size: var(--t-h4);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-normal);
+  margin: 0 0 var(--space-3);
+}
+.hube h5, .hube-doc h5 {
+  font-size: var(--t-h5);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-normal);
+  margin: 0 0 var(--space-2);
+}
+
+.hube p, .hube-doc p {
+  font-size: var(--t-body);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-muted);
+  max-width: 60ch;
+  margin: 0 0 var(--space-4);
+}
+
+.hube .lead, .hube-doc .lead {
+  font-size: var(--t-body-lg);
+  font-weight: var(--fw-regular);
+  color: var(--fg);
+  line-height: var(--lh-relaxed);
+}
+
+/* Labels — short, tracked, SemiBold (never all-caps for sentences) */
+.hube .label, .hube-doc .label {
+  font-size: var(--t-label);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;  /* only acceptable on 2–3 word labels */
+  color: var(--fg-soft);
+}
+
+/* Key figure — the only place orange dominates a number */
+.hube .figure, .hube-doc .figure {
+  font-size: clamp(48px, 8vw, 120px);
+  font-weight: var(--fw-black);
+  color: var(--orange);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+}
+
+/* Quote — never italic. Heavier weight does the emphasis. */
+.hube blockquote, .hube-doc blockquote {
+  font-size: var(--t-h4);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-relaxed);
+  color: var(--fg);
+  border-left: 3px solid var(--orange);
+  padding-left: var(--space-5);
+  margin: var(--space-6) 0;
+}
+
+/* Links */
+.hube a, .hube-doc a {
+  color: var(--link);
+  text-decoration-color: var(--accent-line);
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--dur-base) var(--ease-out);
+}
+.hube a:hover, .hube-doc a:hover {
+  text-decoration-color: var(--orange);
+}
+
+/* Selection — orange on navy, not the blue default */
+.hube ::selection, .hube-doc ::selection {
+  background: var(--orange);
+  color: var(--navy);
+}
